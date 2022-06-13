@@ -1,0 +1,36 @@
+﻿
+@using MVCdbConnect.Models.ORM;
+@model List<Order>;
+
+@if (@Model is null)
+{
+    <p>Orders not found!</p>
+    return;
+}
+
+<table>
+    <tr>
+        <th> Order Id </th>
+        <th> Order Date </th>
+        <th> Required Date </th>
+        <th> Company Name </th>
+        <th> Order Date </th>
+    </tr>
+
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td> @item.Id </td>
+            <td> @item.OrderDate </td>
+            <td> @item.RequiredDate </td>
+            <td> @item.CompanyName </td>
+            <td> @item.Adress </td>
+                <td><input type="button" onclick="location.href='/order/update/@item.Id';" value="Update" /></td>
+                <td><input type="button" onclick="location.href='/order/delete/@item.Id';" value="Delete" /></td>
+        </tr>
+    }
+    
+
+
+</table>

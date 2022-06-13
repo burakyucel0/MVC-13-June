@@ -1,0 +1,33 @@
+﻿<table>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Category ID</th>
+        <th>Stock</th>
+        <th>Order</th>
+        <th>Discounted</th>
+        <th>Update</th>
+    </tr>
+
+    @foreach (var item in @Model)
+    {
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.Name</td>
+            <td>@item.UnitPrice</td>
+            <td>@item.CategoryId</td>
+            <td>@item.UnitInStock</td>
+            <td>@item.UnitOnOrder</td>
+            <td>@item.Discounted</td>
+    <td><input type="button" onclick="location.href='/home/updateproduct/@item.Id';" value="Update this value" /></td>
+        </tr>
+    }
+
+    <tr></tr>
+
+</table>
+
+
+
+

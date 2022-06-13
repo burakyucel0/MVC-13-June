@@ -1,0 +1,27 @@
+﻿@model MVCdbConnect.Models.ORM.Order;
+
+<form action="/Order/add" method="post">
+
+    <div>
+        @Html.LabelFor(q => q.OrderDate)
+        @Html.TextBoxFor(q => q.OrderDate)
+    </div>
+
+    <div>
+        @Html.LabelFor(q => q.RequiredDate)
+        @Html.TextBoxFor(q => q.RequiredDate)
+    </div>
+
+    <div>
+        @Html.LabelFor(q => q.CompanyName)
+        @Html.TextBoxFor(q => q.CompanyName)
+    </div>
+  
+    <div>
+        @Html.LabelFor(q => q.Adress)
+        @Html.TextBoxFor(q => q.Adress)
+    </div>
+
+    <div>
+        <button type="submit">  Add   </button>
+    </div>

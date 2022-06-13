@@ -1,0 +1,30 @@
+﻿
+@{
+}
+
+@if(@Model is null)
+{
+    <p>Not found!</p>
+    return;
+}
+
+<table> 
+    <tr>
+        <th>ID</th>
+        <th>CompanyName</th>
+        <th>ContactName</th>
+        <th>City</th>
+        <th>Country</th>
+    </tr>
+
+    <tr>
+        <td> @Model.Id </td>
+        <td> @Model.CompanyName </td>
+        <td> @Model.ContactName </td>
+        <td> @Model.City </td>
+        <td> @Model.Country </td>
+
+    </tr>
+
+
+</table>

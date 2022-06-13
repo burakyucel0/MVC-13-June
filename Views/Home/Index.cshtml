@@ -1,0 +1,31 @@
+﻿@{
+}
+
+@using MVCdbConnect.Models.ORM;
+@model List<Suppliers>;
+
+
+<table>
+    <tr>
+    <th>ID</th>
+    <th> CompanyName </th>
+    <th> ContactName</th>
+    <th> City </th>
+    <th> Country</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+
+        <tr>
+            <td> <a href="/home/detail/@item.Id"> @item.Id </td>
+            <td> <a href="/home/detail/@item.Id"> @item.CompanyName </td>
+            <td> <a href="/home/detail/@item.Id"> @item.ContactName </td>
+            <td> <a href="/home/detail/@item.Id">  @item.City </td>
+            <td> <a href="/home/detail/@item.Id"> @item.Country</td>
+        </tr>
+
+
+    }
+</table>
+
